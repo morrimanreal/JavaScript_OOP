@@ -69,18 +69,34 @@ class Calculator {
   }
 
   add(a, b) {
+    if (b==undefined) {
+      b = this.result
+    }
+    console.log(b)
     return this.result = a + b;
   }
 
   subtract(a, b) {
+    if (b==undefined) {
+      b = this.result
+    }
+    console.log(b)
     return this.result = a - b;
   }
 
   multiply(a, b) {
+    if (b==undefined) {
+      b = this.result
+    }
+    console.log(b)
     return this.result = a * b;
   }
 
   divide(a, b) {
+    if (b == undefined) {
+      b = this.result
+    }
+    console.log(b)
     return this.result = a/b;
   }
 
@@ -93,11 +109,11 @@ class Calculator {
 
 const calc = new Calculator();
 console.log(calc);
-calc.add(2, 3);
+calc.add(2);
 calc.displayResult();
 calc.subtract(5,1);
 calc.displayResult();
-calc.multiply(2, 3);
+calc.multiply(0);
 calc.displayResult();
-calc.divide(100,5);
+calc.divide(5);
 calc.displayResult();
